@@ -13,7 +13,11 @@ image: '../images/whendidiwork-logo.png'
 comments: true
 description: The whendidiwork time tracking application - perfect for Third Shifters
 ---
-<div class="well well-lg">
+
+<div class="well">
+  <strong>Update 10/22/2019 </strong> This app is no longer available. I got to save some money on hosting when I can!
+</div>
+<div class="well">
   <strong>Update 12/5/2015 </strong>I have released an updated version of the app with new features! When you&#8217;re finished here, head over and <a href="/i-built-this/javascript/angular/2015/12/06/new-and-improved-whendidiwork-com">learn more</a> about the new whendidiwork!
 </div>
 

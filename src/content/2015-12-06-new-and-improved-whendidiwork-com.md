@@ -14,6 +14,10 @@ comments: true
 description: An update to the whendidiwork time tracking app
 ---
 
+<div class="well">
+  <strong>Update 10/22/2019 </strong> This app is no longer available. I got to save some money on hosting when I can!
+</div>
+
 <div style="width: 200px"><a href="https://play.google.com/store/apps/details?id=com.brandonlehr.whendidiwork&amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"></a></div>
 
 

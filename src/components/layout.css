@@ -681,6 +681,13 @@ a:hover {
   margin-bottom: 10px;
 }
 
+.well {
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #e4e4e4 ;
+  margin-bottom: 10px;
+}
+
 /* CLOCK */
 
 .clock {

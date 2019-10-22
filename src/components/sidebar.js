@@ -85,7 +85,7 @@ export default function Sidebar(props) {
                   </Link>
                   , Attendance Tracking, Made Easy!
                 </li>
-                <li>
+                {/* <li>
                   <Link to="/i-built-this/2015/05/12/whendidiwork-a-time-clock-app">
                     whendidiwork.com
                   </Link>
@@ -94,7 +94,7 @@ export default function Sidebar(props) {
                   <a href="https://play.google.com/store/apps/details?id=com.brandonlehr.whendidiwork">
                     Android
                   </a>
-                </li>
+                </li> */}
                 <li>
                   <Link to="/i-built-this/2016/06/01/pinewoodraceday">
                     PinewoodRaceDay.com
