@@ -207,11 +207,13 @@ class _FirebaseMessageWrapperState extends State<FirebaseMessageWrapper> {
             AsyncSnapshot<Map<String, dynamic>> snapshot) {
           Map<String, dynamic> msg = snapshot.data;
           if (msg != null) {
-            print(msg);
-            WidgetsBinding.instance
-                .addPostFrameCallback((_) => _showMessage(msg));
+            // check if this instance is the current route or else message will be displayed on all instances
+            if (ModalRoute.of(context).isCurrent) {
+              WidgetsBinding.instance
+                  .addPostFrameCallback((_) => _showMessage(msg));
+            }
             // adding a null stops the previous message from being displayed again
-            _messageStream.addMessage(null);
+            MessageStream.instance.addMessage(null);
           }
           return widget.child;
         });
