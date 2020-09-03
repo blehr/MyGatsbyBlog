@@ -653,6 +653,12 @@ a:hover {
   padding-bottom: 10px;
 }
 
+@media screen and (max-width: 640px) {
+  .two-item-flex-no-border {
+    justify-content: center;
+  }
+}
+
 .div-300-margin-bottom-10 {
   width: 300px;
   margin-bottom: 10px;

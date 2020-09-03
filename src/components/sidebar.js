@@ -85,16 +85,6 @@ export default function Sidebar(props) {
                   </Link>
                   , Attendance Tracking, Made Easy!
                 </li>
-                {/* <li>
-                  <Link to="/i-built-this/2015/05/12/whendidiwork-a-time-clock-app">
-                    whendidiwork.com
-                  </Link>
-                  , a time tracking web app using Angular, Node, and Google Apis
-                  and now on{' '}
-                  <a href="https://play.google.com/store/apps/details?id=com.brandonlehr.whendidiwork">
-                    Android
-                  </a>
-                </li> */}
                 <li>
                   <Link to="/i-built-this/2016/06/01/pinewoodraceday">
                     PinewoodRaceDay.com
@@ -109,14 +99,6 @@ export default function Sidebar(props) {
                   , a highly customizable theme perfect for personal blogs and
                   bios.
                 </li>
-                {/* <li>
-                  <Link to="/i-built-this/2015/05/15/wchscouts-com-cub-boy-scout-website-for-washington-ch-oh">
-                    Scout Website
-                  </Link>
-                  , this is the website for Troop and Pack 112. It features a
-                  JavaScript powered quiz to help the boys learn the Scout Oath
-                  and Law.
-                </li> */}
               </ul>
             </SidebarBlock>
           </StyledSidebar>
