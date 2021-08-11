@@ -34,8 +34,8 @@ exports.createPages = ({ actions, graphql }) => {
         const blogTemplate = path.resolve('./src/templates/blog-post.js')
 
         const posts = result.data.allMarkdownRemark.edges
-        const postsPerPage = 10;
-        const numPages = Math.ceil(posts.length / postsPerPage);
+        const postsPerPage = 10
+        const numPages = Math.ceil(posts.length / postsPerPage)
 
         _.times(numPages, i => {
           createPage({
@@ -45,10 +45,10 @@ exports.createPages = ({ actions, graphql }) => {
               limit: postsPerPage,
               skip: i * postsPerPage,
               numPages,
-              currentPage: i + 1
+              currentPage: i + 1,
             },
-          });
-        });
+          })
+        })
         posts.forEach(({ node }, index) => {
           createPage({
             path: node.fields.slug,

@@ -1,4 +1,5 @@
 import React from 'react'
+import kebabCase from 'lodash/kebabCase'
 import { Link } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { StyledUl, StyledLi } from './post-categories-styles'
@@ -13,7 +14,9 @@ export default function PostCategories(props) {
       {props.categories.map((cat, i) => {
         return (
           <StyledLi key={i}>
-            <Link to={`/categories/${cat}`}>{titleCaseCategories(cat)}</Link>
+            <Link to={`/categories/${kebabCase(cat)}`}>
+              {titleCaseCategories(cat)}
+            </Link>
             {i !== props.categories.length - 1 ? ',' : ''}
           </StyledLi>
         )
