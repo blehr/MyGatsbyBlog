@@ -664,6 +664,10 @@ a:hover {
   margin-bottom: 10px;
 }
 
+.br-15 {
+  border-radius: 15px;
+}
+
 .video-container {
   position: relative;
   padding-bottom: 56.25%;
@@ -690,7 +694,7 @@ a:hover {
 .well {
   padding: 15px;
   border-radius: 5px;
-  background-color: #e4e4e4 ;
+  background-color: #e4e4e4;
   margin-bottom: 10px;
 }
 

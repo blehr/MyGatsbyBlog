@@ -10,15 +10,14 @@ image: '../images/flutter-logo.svg'
 featured_image: '../images/flutter-logo.svg'
 featured_image_max_width: 300px
 ---
+
 <div class="video-container">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/ZDOyCNTM9ro/?mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-
 I recently wanted to create a simple game for my [Drink Counter](/Android/iOS/flutter/2019/06/27/drink-counter-stats-and-quotes) app that made use of the device's accelerometer. Here is what I learned.
 
-##Setup
-
+## Setup
 
 The first thing you need to do is to get the [sensors](https://pub.dev/packages/sensors) package and include it in your pubspec.yaml.
 
@@ -31,10 +30,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
   sensors: ^0.4.0+1
-
-
 ```
-
 
 Since we will be moving the phone around to position the circle, we will have to lock the screen orientation to portrait.
 
@@ -48,9 +44,10 @@ For iOS edit the info.plist
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
 ```
+
 <br>
 
-##Widgets!
+## Widgets!
 
 Let's start by building the screen.
 
@@ -143,9 +140,10 @@ The main part of the screen is a Stack containing our "target" and moving circle
     );
   }
 ```
+
 <br>
 
-##Accelerometer
+## Accelerometer
 
 Data from the accelerometer can be accessed by calling
 
@@ -183,9 +181,10 @@ setPosition(AccelerometerEvent event) {
 }
 
 ```
+
 <br>
 
-##Checking the position and setting the color
+## Checking the position and setting the color
 
 ```dart
 setColor(AccelerometerEvent event) {
@@ -216,10 +215,10 @@ setColor(AccelerometerEvent event) {
 }
 
 ```
+
 <br>
 
-
-##Putting it all together
+## Putting it all together
 
 ```dart
 class MyHomePage extends StatefulWidget {

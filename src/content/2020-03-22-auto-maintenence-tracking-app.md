@@ -27,16 +27,13 @@ featured_image_max_width: 300px
   </div>
 </div>
 
-
 <div style="display:flex;justify-content:center;margin-bottom:10px;">
   <div style="width:250px;">
     <img src="../images/auto_icon.png" alt="app icon">
   </div>
 </div>
 
-
 Face it, having multiple vehicles which are always in need a repair makes it difficult to remember which vehicle had what repair and when.
-
 
 Didn't I just replace the brakes on the van over the summer?
 
@@ -44,7 +41,7 @@ I know that the battery was changed in the car last winter, or was it the winter
 
 These are things you will want to be able to one day remember, but we both know you won't!
 
-###The Solution
+### The Solution
 
 Now you can download [Auto Log](https://play.google.com/store/apps/details?id=com.brandonlehr.autoMaintenance) for Android or [Auto Maintenance](https://apps.apple.com/app/id1489955489) for iOS. The app allows you track your vehicles and their repairs quickly and conveniently.
 
@@ -77,7 +74,6 @@ Now you can download [Auto Log](https://play.google.com/store/apps/details?id=co
 
 For added convenience, the app offers a yearly subscription to save images of your bills and receipts and attach them to a service record. Who wants to keep paper copies? Now you can view or download them at any time!
 
-
 <div class="two-item-flex-no-border" >
   <div class="div-300-margin-bottom-10">
     <img src="../images/image_display.png" alt="App screenshot">
@@ -104,6 +100,3 @@ Give it a try and let me know what you think! I would love to hear any suggestio
     </a>
   </div>
 </div>
-
-
-

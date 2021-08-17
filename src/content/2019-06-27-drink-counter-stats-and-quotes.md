@@ -30,6 +30,26 @@ featured_image_max_width: 300px
 </div>
 </div>
 
+## Now with Apple Watch Support! - 08/17/2021
+
+<div class="two-item-flex-no-border" >
+  <div class="div-300-margin-bottom-10"  >
+    <img src="../images/DC_watch_session.png" alt="Drink Counter screenshot" >
+    </div>
+  <div class="div-300-margin-bottom-10">
+    <img src="../images/DC_watch_stats.png" alt="Drink Counter screenshot" >
+  </div>
+</div>
+
+<div class="two-item-flex-no-border" >
+  <div class="div-300-margin-bottom-10">
+    <img src="../images/DC_watch_complications.png" alt="Drink Counter screenshot">
+    </div>
+  <div class="div-300-margin-bottom-10">
+    <img src="../images/DC_watch_icon.png" alt="Drink Counter screenshot" >
+  </div>
+</div>
+
 My latest app is, Drink Counter! A delightful app for tracking the number and timing of your drinks.
 
 <div class="two-item-flex-no-border" >

@@ -13,14 +13,13 @@ featured_image_max_width: 300px
 
 I recently wanted to add Firebase Messaging to enable push notifications to an application. Overall, the process worked well, but there was one hiccup I that I ran into.
 
-###How to display the messages while the app was open.
+### How to display the messages while the app was open.
 
 I needed a way to receive the message and then be able to display it regardless of where the user was in the app. If you have developed Flutter apps then you can see my problem. Things are generally easy when events are handled on a particular screen and contained conveniently in a particular widget tree. When some thing needs to live outside of this, things get interesting.
 
-###So how did I solve this problem?
+### So how did I solve this problem?
 
 I decided I wanted to be able to place in-coming messages that triggered the onMessage listening callback, into a stream so that I could simply read the data as it came in. I created a MessageStream class as a singleton that contained a stream using behavior subject from rxdart.
-
 
 ```dart
 import 'dart:async';
@@ -151,7 +150,7 @@ class MyApp extends StatelessWidget {
 
 ```
 
-###Sending the messaging token to the server.
+### Sending the messaging token to the server.
 
 I handle sending the messaging token to the server after a user signs in. I need the user so that I can associate the token with them. I also use this time to ask for permissions on iOS.
 
@@ -174,7 +173,7 @@ I handle sending the messaging token to the server after a user signs in. I need
   }
 ```
 
-###So how do I show the message while the user is in the app?
+### So how do I show the message while the user is in the app?
 
 For this, I created a FirebaseMessageWrapper which is a stateful widget that will handle listening to the message stream and displaying a snackbar to the user. The snackbar requires a Scaffold to be in the widget tree, so I wrap the body widgets of any scaffold with this wrapper.
 

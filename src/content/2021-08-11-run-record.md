@@ -85,7 +85,7 @@ All data is read from the Apple Health App and never leaves your phone!
 <div class="two-item-flex-no-border" >
     <div class="div-300-margin-bottom-10">
       <div align="center">Charts</div>
-    <img src="../images/run_record_chart_distance.png" alt="App screenshot">
+    <img src="../images/run_record_chart_distance12.png" alt="App screenshot">
     </div>
   <div class="div-300-margin-bottom-10">
     <div align="center">Enjoy Ad Free</div>
