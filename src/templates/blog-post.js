@@ -25,19 +25,19 @@ function BlogPost(props) {
   const url = props.data.site.siteMetadata.siteUrl
   const thumbnail =
     post.frontmatter.featured_image &&
-    post.frontmatter.featured_image.childImageSharp
+      post.frontmatter.featured_image.childImageSharp
       ? post.frontmatter.featured_image.childImageSharp.resize.src
       : post.frontmatter.featured_image
-      ? post.frontmatter.featured_image.publicURL
-      : ''
+        ? post.frontmatter.featured_image.publicURL
+        : ''
   const { title, date, categories, description } = post.frontmatter
   const { prev, next } = props.pageContext
   const disqusShortname = "brandonlehr";
-    const disqusConfig = {
-      identifier: post.id,
-      title: post.frontmatter.title,
-      url: props.location.href
-    };
+  const disqusConfig = {
+    identifier: post.id,
+    title: post.frontmatter.title,
+    url: props.location.href
+  };
 
   return (
     <Layout pageType="blogPost" title={title} showNav >
@@ -85,7 +85,7 @@ export const query = graphql`query PostQuery($slug: String!) {
           resize(width: 1500, height: 1500) {
             src
           }
-          gatsbyImageData(width: 786, placeholder: TRACED_SVG, layout: CONSTRAINED)
+          gatsbyImageData(width: 786, placeholder: BLURRED, layout: CONSTRAINED)
         }
       }
     }

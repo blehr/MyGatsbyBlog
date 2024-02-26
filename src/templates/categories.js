@@ -43,7 +43,7 @@ const Tags = ({ pageContext, data, location }) => {
     <Metatags
       title={`${titleCased} on Brandon Lehr . com`}
       description={description}
-      thumbnail={siteUrl + data.file.childImageSharp.gatsbyImageData.src}
+      thumbnail={siteUrl + data.file?.childImageSharp.gatsbyImageData.src}
       url={siteUrl}
       pathname={`/categories/${tag}`}
     />
@@ -53,7 +53,7 @@ const Tags = ({ pageContext, data, location }) => {
         <h2>{titleCased}</h2>
       </TagHeaderDiv>
       <ul>
-        {edges.map(({ node }) => {
+        {edges?.map(({ node }) => {
           const { title } = node.frontmatter
           const { slug } = node.fields
           return (
@@ -94,7 +94,7 @@ Tags.propTypes = {
 
 export default Tags
 
-export const pageQuery = graphql`query ($tag: [String]) {
+export const pageQuery = graphql`query{
   site {
     siteMetadata {
       title
@@ -102,27 +102,15 @@ export const pageQuery = graphql`query ($tag: [String]) {
       siteUrl
     }
   }
-  file(relativePath: {eq: "brandonlehr_header.png"}) {
-    childImageSharp {
-      gatsbyImageData(width: 1040, placeholder: TRACED_SVG, layout: FIXED)
+  allMarkdownRemark(limit: 2000) {
+    group(field: {frontmatter: {categories: SELECT}}) {
+      fieldValue
+      totalCount
     }
   }
-  allMarkdownRemark(
-    limit: 2000
-    sort: {fields: [frontmatter___date], order: DESC}
-    filter: {frontmatter: {categories: {in: $tag}}}
-  ) {
-    totalCount
-    edges {
-      node {
-        frontmatter {
-          title
-          date
-        }
-        fields {
-          slug
-        }
-      }
+  file(relativePath: {eq: "brandonlehr_header.png"}) {
+    childImageSharp {
+      gatsbyImageData(width: 1040, placeholder: BLURRED, layout: FIXED)
     }
   }
 }`

@@ -15,11 +15,7 @@ const TagsPage = ({
     site: {
       siteMetadata: { title, description, siteUrl },
     },
-    file: {
-      childImageSharp: {
-        fixed: { src },
-      },
-    },
+    file,
   },
 }) => {
   return (
@@ -27,7 +23,7 @@ const TagsPage = ({
       <Metatags
         title={title}
         description={description}
-        thumbnail={siteUrl + src}
+        thumbnail={siteUrl + file?.childImageSharp?.fixed?.src}
         url={siteUrl}
         pathname={'/categories'}
       />
@@ -77,14 +73,14 @@ export const pageQuery = graphql`{
     }
   }
   allMarkdownRemark(limit: 2000) {
-    group(field: frontmatter___categories) {
+    group(field: {frontmatter: {categories: SELECT}}) {
       fieldValue
       totalCount
     }
   }
   file(relativePath: {eq: "brandonlehr_header.png"}) {
     childImageSharp {
-      gatsbyImageData(width: 1040, placeholder: TRACED_SVG, layout: FIXED)
+      gatsbyImageData(width: 1040, placeholder: BLURRED, layout: FIXED)
     }
   }
 }`

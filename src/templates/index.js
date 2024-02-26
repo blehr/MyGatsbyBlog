@@ -77,7 +77,7 @@ const IndexPage = props => {
               node.frontmatter.featured_image.childImageSharp && (
                 <StyledImage>
                   <StyledInnerImageDiv>
-                    <GatsbyImage image={node.frontmatter.featured_image.childImageSharp.gatsbyImageData} />
+                    <GatsbyImage image={node.frontmatter.featured_image.childImageSharp.gatsbyImageData} alt="featured" />
                   </StyledInnerImageDiv>
                 </StyledImage>
               )}
@@ -132,11 +132,7 @@ const IndexPage = props => {
 }
 export default IndexPage
 export const listQuery = graphql`query ListQuery($skip: Int!, $limit: Int!) {
-  allMarkdownRemark(
-    sort: {order: DESC, fields: [frontmatter___date]}
-    limit: $limit
-    skip: $skip
-  ) {
+  allMarkdownRemark(sort: {frontmatter: {date: DESC}}, limit: $limit, skip: $skip) {
     edges {
       node {
         fields {
@@ -156,7 +152,7 @@ export const listQuery = graphql`query ListQuery($skip: Int!, $limit: Int!) {
               resize(width: 1500, height: 1500) {
                 src
               }
-              gatsbyImageData(width: 768, placeholder: TRACED_SVG, layout: CONSTRAINED)
+              gatsbyImageData(width: 768, placeholder: BLURRED, layout: CONSTRAINED)
             }
           }
         }
@@ -172,7 +168,7 @@ export const listQuery = graphql`query ListQuery($skip: Int!, $limit: Int!) {
   }
   file(relativePath: {eq: "brandonlehr_header.png"}) {
     childImageSharp {
-      gatsbyImageData(width: 1080, placeholder: TRACED_SVG, layout: FIXED)
+      gatsbyImageData(width: 1080, placeholder: BLURRED, layout: FIXED)
     }
   }
 }`

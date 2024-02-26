@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { StaticQuery, graphql } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import { GatsbyImage } from "gatsby-plugin-image";
 import FollowMe from './follow-me'
 
@@ -36,36 +36,30 @@ const BioWordsStyle = styled.div`
 `
 
 export default function AuthorBio() {
-  return (
-    <StaticQuery
-      query={graphql`{
-  file(relativePath: {eq: "profilefunky.jpg"}) {
-    childImageSharp {
-      gatsbyImageData(width: 150, height: 150, placeholder: TRACED_SVG, layout: FIXED)
+  const data = useStaticQuery(graphql`{
+    file(relativePath: {eq: "profilefunky.jpg"}) {
+      childImageSharp {
+        gatsbyImageData(width: 150, height: 150, placeholder: BLURRED, layout: FIXED)
+      }
     }
-  }
-}`}
-      render={data => {
-        return (
-          <AuthorBioDiv>
-            <div>
-              <GatsbyImage
-                image={data.file.childImageSharp.gatsbyImageData}
-                imgStyle={{ borderRadius: '20px' }} />
-            </div>
-            <BioWordsDiv>
-              <FollowMe />
-              <BioWordsStyle>
-                <p>I'm Brandon Lehr, your friendly, neighborhood developer</p>
+  }`)
+  return (
+    <AuthorBioDiv>
+      <div>
+        <GatsbyImage
+          image={data.file.childImageSharp.gatsbyImageData}
+          imgStyle={{ borderRadius: '20px' }} />
+      </div>
+      <BioWordsDiv>
+        <FollowMe />
+        <BioWordsStyle>
+          <p>I'm Brandon Lehr, your friendly, neighborhood developer</p>
 
-                <span>
-                &#10033; May or may not be friendly, most likely not your neighbor
-                </span>
-              </BioWordsStyle>
-            </BioWordsDiv>
-          </AuthorBioDiv>
-        );
-      }}
-    />
+          <span>
+            &#10033; May or may not be friendly, most likely not your neighbor
+          </span>
+        </BioWordsStyle>
+      </BioWordsDiv>
+    </AuthorBioDiv>
   );
 }

@@ -32,6 +32,7 @@ The `<ins></ins>` code from AdSense is wrapped in a div with a key of location.k
   }, [location.key]);
 
   const handleAds = () => {
+    // check if script exists yet
     if (!document.getElementById("adsbygoogleaftermount")) {
       var script = document.createElement("script");
       script.id = "adsbygoogleaftermount";
@@ -41,6 +42,7 @@ The `<ins></ins>` code from AdSense is wrapped in a div with a key of location.k
         "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
       document.head.appendChild(script);
     }
+    // push ad with every location change
     window.adsbygoogle = window.adsbygoogle || [];
     window.adsbygoogle.push({});
   };
@@ -61,4 +63,4 @@ The `<ins></ins>` code from AdSense is wrapped in a div with a key of location.k
 }
 ```
 
-This is working perfectly on [alpacatracker.com](https://alpacatracker.com). It works with placed ads as well as auto ads.
+This is working on [alpacatracker.com](https://alpacatracker.com) with placed ads as well as auto ads.

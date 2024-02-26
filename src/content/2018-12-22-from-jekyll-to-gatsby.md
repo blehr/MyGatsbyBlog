@@ -5,26 +5,23 @@ date: '2018-12-22'
 categories: ['gatsby', 'jekyll']
 
 comments: true
-description:  How I migrated my blog from Jekyll to Gatsby.
-image: "../images/gatsby.svg"
-featured_image: "../images/gatsby.svg"
+description: How I migrated my blog from Jekyll to Gatsby.
+image: '../images/gatsby.svg'
+featured_image: '../images/gatsby.svg'
 featured_image_max_width: 300px
 ---
 
 Back in [September of 2016](/jekyll/i-built-this/2016/09/06/welcome-to-my-new-jekyll-blog) I moved this blog from WordPress to [Jekyll](https://jekyllrb.com/). I was interested in speed that a static site generator provides. At the time, I looked into the available solutions out there and decided to go with Jekyll, as it was very popular and had great support for github pages. Overall, I was pleased with with Jekyll, even though it is implemented in Ruby, a language and ecosystem with which I had no previous experience with.
 
-
 ## Gatsby
 
 ![gatsby logo](../images/gatsby.svg)
 
-
 Fast forward to today. There are a multitude of new options for static site generators. The one that has been filling up my twitter feed for the past year is [Gatsby](https://www.gatsbyjs.org/). I love that it is built with Javascript and React, an ecosystem that I have been heavily invested in for years.
-
 
 ## Getting Started
 
-One of the biggest strengths of Gatsby is its active, friendly community. There are tons of plugins and articles, excellent documentation, and features you probably haven't even thought of. 
+One of the biggest strengths of Gatsby is its active, friendly community. There are tons of plugins and articles, excellent documentation, and features you probably haven't even thought of.
 
 I started my adventures where we all begin, the [getting started tutorial](https://www.gatsbyjs.org/tutorial/). I'm not going to copy and paste it here, I'll just expand upon the relevant steps.
 
@@ -34,7 +31,7 @@ To be honest, I followed this [blog post](https://reactgo.com/gatsby-advanced-bl
 
 ## My Biggest Issue
 
-While I ran Jekyll, I set up the post urls to include the tags that I attached to each post. So, a post such as My React Post, tagged with React would compile to /YYYY/MM/DD/react/my-react-post. This isn't the default with most configurations of gatsby. The problem was that if I choose to use the new way, all links that I had posted in social media or other places, would break. 
+While I ran Jekyll, I set up the post urls to include the tags that I attached to each post. So, a post such as My React Post, tagged with React would compile to /YYYY/MM/DD/react/my-react-post. This isn't the default with most configurations of gatsby. The problem was that if I choose to use the new way, all links that I had posted in social media or other places, would break.
 
 Another difference between Jekyll and Gatsby, is that with jekyll I simply had a folder full of posts which were markdown files. With Gatsby, it seems as though most prefer to have a folder named with the date and a post markdown file inside of it. This really isn't a big issue, but being lazy, I didn't want to change everything around that much.
 
@@ -77,8 +74,8 @@ exports.createPages = ({ actions, graphql }) => {
         const blogTemplate = path.resolve('./src/templates/blog-post.js')
 
         const posts = result.data.allMarkdownRemark.edges
-        const postsPerPage = 10;
-        const numPages = Math.ceil(posts.length / postsPerPage);
+        const postsPerPage = 10
+        const numPages = Math.ceil(posts.length / postsPerPage)
 
         _.times(numPages, i => {
           createPage({
@@ -88,10 +85,10 @@ exports.createPages = ({ actions, graphql }) => {
               limit: postsPerPage,
               skip: i * postsPerPage,
               numPages,
-              currentPage: i + 1
+              currentPage: i + 1,
             },
-          });
-        });
+          })
+        })
         posts.forEach(({ node }, index) => {
           createPage({
             path: node.fields.slug,
@@ -156,9 +153,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({ node, name: `date`, value: date })
   }
 }
-
 ```
-
 
 ## Gatsby Image
 
@@ -197,9 +192,7 @@ const SidebarBlock = styled.div`
 `
 
 export default function Sidebar(props) {
-  return (
-    <StaticQuery
-      query={graphql`
+  const data = useStaticQuery(graphql`
         query {
           file(relativePath: { eq: "profilefunky.jpg" }) {
             childImageSharp {
@@ -209,8 +202,8 @@ export default function Sidebar(props) {
             }
           }
         }
-      `}
-      render={data => {
+      `)
+
         return (
           <StyledSidebar>
             <SidebarBlock>
@@ -225,8 +218,7 @@ export default function Sidebar(props) {
             </SidebarBlock>
           </StyledSidebar>
         )
-      }}
-    />
+
   )
 }
 
@@ -324,10 +316,8 @@ module.exports = {
     `gatsby-plugin-styled-components`,
   ],
 }
-
 ```
 
 ## Learn More
 
 If you are looking for more help, feel free to have a look at this site's [repo](https://github.com/blehr/MyGatsbyBlog). Here you can see all of the configuration and setup required to get things up and running.
-

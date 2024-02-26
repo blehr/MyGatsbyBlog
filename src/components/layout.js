@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { StaticQuery, graphql } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faFolderOpen } from '@fortawesome/free-regular-svg-icons'
 import styled from 'styled-components'
@@ -43,42 +43,43 @@ const OneColumnLayoutDiv = styled.div`
   padding-top: 0;
 `
 
-const Layout = ({ children, pageType, title, showNav }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
+const Layout = ({ children, pageType, title, showNav }) => {
+  const data = useStaticQuery(graphql`
+  query SiteTitleQuery {
+    site {
+      siteMetadata {
+        title
       }
-    `}
-    render={data => (
-      <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        {showNav && <Navigation title={title} />}
-        {/* <GoogleAd
+    }
+  }
+`)
+
+  return (
+    <>
+      <Header siteTitle={data.site.siteMetadata.title} />
+      {showNav && <Navigation title={title} />}
+      {/* <GoogleAd
           client="ca-pub-9453781066915703"
           slot="3728415001"
           format="auto"
           wrapperDivStyle={{ maxWidth: '1200px', minHeight: '50px', margin: 'auto', marginBottom: '15px' }}
         /> */}
 
-        {pageType === 'postList' && (
-          <TwoColumnLayoutDiv>
-            <Sidebar />
-            <ContentDiv>{children}</ContentDiv>
-          </TwoColumnLayoutDiv>
-        )}
-        {pageType === 'blogPost' && (
-          <OneColumnLayoutDiv>{children}</OneColumnLayoutDiv>
-        )}
-        <Footer />
-      </>
-    )}
-  />
-)
+      {pageType === 'postList' && (
+        <TwoColumnLayoutDiv>
+          <Sidebar />
+          <ContentDiv>{children}</ContentDiv>
+        </TwoColumnLayoutDiv>
+      )}
+      {pageType === 'blogPost' && (
+        <OneColumnLayoutDiv>{children}</OneColumnLayoutDiv>
+      )}
+      <Footer />
+    </>
+  )
+}
+
+
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

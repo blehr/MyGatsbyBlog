@@ -1,4 +1,7 @@
 module.exports = {
+  flags: {
+    DEV_SSR: true,
+  },
   siteMetadata: {
     title: 'Brandon Lehr . com',
     description: 'Online Home of Brandon Lehr',
