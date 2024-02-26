@@ -16,7 +16,7 @@ export default function Footer() {
   return (
     <StyledFooter>
       <div>
-        <p>&copy; 2019 Brandon Lehr</p>
+        <p>&copy; {new Date().getFullYear()} Brandon Lehr</p>
       </div>
     </StyledFooter>
   )

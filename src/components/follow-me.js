@@ -48,7 +48,7 @@ export default function FollowMe() {
         <FontAwesomeIcon icon={faGithub} size="2x" />
       </ShareGitHub>
       <ShareLinkedIn
-        href="/https://www.linkedin.com/in/brandonlehr/"
+        href="https://www.linkedin.com/in/brandonlehr/"
         style={{ marginRight: '8px' }}
       >
         <FontAwesomeIcon icon={faLinkedinIn} size="2x" />

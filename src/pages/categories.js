@@ -45,7 +45,7 @@ const TagsPage = ({
         </ul>
       </Layout>
     </div>
-  )
+  );
 }
 
 TagsPage.propTypes = {
@@ -68,27 +68,23 @@ TagsPage.propTypes = {
 
 export default TagsPage
 
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-        description
-        siteUrl
-      }
-    }
-    allMarkdownRemark(limit: 2000) {
-      group(field: frontmatter___categories) {
-        fieldValue
-        totalCount
-      }
-    }
-    file(relativePath: { eq: "brandonlehr_header.png" }) {
-      childImageSharp {
-        fixed(width: 1040) {
-          ...GatsbyImageSharpFixed_withWebp_tracedSVG
-        }
-      }
+export const pageQuery = graphql`{
+  site {
+    siteMetadata {
+      title
+      description
+      siteUrl
     }
   }
-`
+  allMarkdownRemark(limit: 2000) {
+    group(field: frontmatter___categories) {
+      fieldValue
+      totalCount
+    }
+  }
+  file(relativePath: {eq: "brandonlehr_header.png"}) {
+    childImageSharp {
+      gatsbyImageData(width: 1040, placeholder: TRACED_SVG, layout: FIXED)
+    }
+  }
+}`

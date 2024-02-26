@@ -10,7 +10,7 @@ import './layout.css'
 import Navigation from './navigation'
 import Sidebar from './sidebar'
 import Footer from './footer'
-import GoogleAd from './google_ad'
+// import GoogleAd from './google_ad'
 
 library.add(faFolderOpen)
 
@@ -64,7 +64,7 @@ const Layout = ({ children, pageType, title, showNav }) => (
           format="auto"
           wrapperDivStyle={{ maxWidth: '1200px', minHeight: '50px', margin: 'auto', marginBottom: '15px' }}
         /> */}
-        
+
         {pageType === 'postList' && (
           <TwoColumnLayoutDiv>
             <Sidebar />

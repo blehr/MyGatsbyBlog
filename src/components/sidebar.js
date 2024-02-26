@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { StaticQuery, graphql, Link } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 
 import FollowMe from './follow-me';
 
@@ -23,25 +23,20 @@ const SidebarBlock = styled.div`
 export default function Sidebar(props) {
   return (
     <StaticQuery
-      query={graphql`
-        query {
-          file(relativePath: { eq: "profilefunky.jpg" }) {
-            childImageSharp {
-              fixed(width: 150, height: 150) {
-                ...GatsbyImageSharpFixed_withWebp_tracedSVG
-              }
-            }
-          }
-        }
-      `}
+      query={graphql`{
+  file(relativePath: {eq: "profilefunky.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(width: 150, height: 150, placeholder: TRACED_SVG, layout: FIXED)
+    }
+  }
+}`}
       render={data => {
         return (
           <StyledSidebar>
             <SidebarBlock>
-              <Img
-                fixed={data.file.childImageSharp.fixed}
-                imgStyle={{ borderRadius: '20px', marginRight: 'auto' }}
-              />
+              <GatsbyImage
+                image={data.file.childImageSharp.gatsbyImageData}
+                imgStyle={{ borderRadius: '20px', marginRight: 'auto' }} />
             </SidebarBlock>
 
             <SidebarBlock>
@@ -102,8 +97,8 @@ export default function Sidebar(props) {
               </ul>
             </SidebarBlock>
           </StyledSidebar>
-        )
+        );
       }}
     />
-  )
+  );
 }

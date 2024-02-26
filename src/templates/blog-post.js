@@ -69,34 +69,30 @@ function BlogPost(props) {
 
 export default BlogPost
 
-export const query = graphql`
-  query PostQuery($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      frontmatter {
-        title
-        date(formatString: "MMMM Do YYYY")
-        description
-        categories
-        featured_image {
-          publicURL
-        }
-        featured_image {
-          childImageSharp {
-            resize(width: 1500, height: 1500) {
-              src
-            }
-            fluid(maxWidth: 786) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
-        }
+export const query = graphql`query PostQuery($slug: String!) {
+  markdownRemark(fields: {slug: {eq: $slug}}) {
+    html
+    frontmatter {
+      title
+      date(formatString: "MMMM Do YYYY")
+      description
+      categories
+      featured_image {
+        publicURL
       }
-    }
-    site {
-      siteMetadata {
-        siteUrl
+      featured_image {
+        childImageSharp {
+          resize(width: 1500, height: 1500) {
+            src
+          }
+          gatsbyImageData(width: 786, placeholder: TRACED_SVG, layout: CONSTRAINED)
+        }
       }
     }
   }
-`
+  site {
+    siteMetadata {
+      siteUrl
+    }
+  }
+}`

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 import styled from 'styled-components'
 import Layout from '../components/layout'
 import Metatags from '../components/Metatags'
@@ -57,31 +57,27 @@ const IndexPage = props => {
   const { currentPage, numPages } = props.pageContext
   const isFirst = currentPage === 1
   const isLast = currentPage === numPages
-  const prevPage = currentPage - 1 === 1 ? '/' : (currentPage - 1).toString()
-  const nextPage = (currentPage + 1).toString()
+  const prevPage = currentPage - 1 === 1 ? '/' : `/${currentPage - 1}`
+  const nextPage = `/${currentPage + 1}`
   const { title, description, siteUrl } = props.data.site.siteMetadata
   return (
     <Layout pageType="postList" location={props.location}>
       <Metatags
         title={title}
         description={description}
-        thumbnail={props.data.site.siteMetadata.siteUrl + props.data.file.childImageSharp.fixed.src}
+        thumbnail={props.data.site.siteMetadata.siteUrl + props.data.file.childImageSharp.gatsbyImageData.src}
         url={siteUrl}
         pathname={props.location.pathname}
       />
       {postList.edges.map(({ node }, i) => (
         <PostList key={i}>
           <DateSpan>{node.frontmatter.date}</DateSpan>
-          <Link to={node.fields.slug} className="link">
+          <Link to={node.fields?.slug} className="link">
             {node.frontmatter.featured_image &&
               node.frontmatter.featured_image.childImageSharp && (
                 <StyledImage>
                   <StyledInnerImageDiv>
-                    <Img
-                      fluid={
-                        node.frontmatter.featured_image.childImageSharp.fluid
-                      }
-                    />
+                    <GatsbyImage image={node.frontmatter.featured_image.childImageSharp.gatsbyImageData} />
                   </StyledInnerImageDiv>
                 </StyledImage>
               )}
@@ -132,57 +128,51 @@ const IndexPage = props => {
         )}
       </PageNavigation>
     </Layout>
-  )
+  );
 }
 export default IndexPage
-export const listQuery = graphql`
-  query ListQuery($skip: Int!, $limit: Int!) {
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
-      limit: $limit
-      skip: $skip
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          excerpt(pruneLength: 250)
-          frontmatter {
-            date(formatString: "MMMM Do YYYY")
-            title
-            categories
-            featured_image_max_width
-            featured_image {
-              publicURL
-            }
-            featured_image {
-              childImageSharp {
-                resize(width: 1500, height: 1500) {
-                  src
-                }
-                fluid(maxWidth: 768) {
-                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                }
-              }
-            }
-          }
+export const listQuery = graphql`query ListQuery($skip: Int!, $limit: Int!) {
+  allMarkdownRemark(
+    sort: {order: DESC, fields: [frontmatter___date]}
+    limit: $limit
+    skip: $skip
+  ) {
+    edges {
+      node {
+        fields {
+          slug
         }
-      }
-    }
-    site {
-      siteMetadata {
-        siteUrl
-        title
-        description
-      }
-    }
-    file(relativePath: { eq: "brandonlehr_header.png" }) {
-      childImageSharp {
-        fixed(width: 1080) {
-          ...GatsbyImageSharpFixed_withWebp_tracedSVG
+        excerpt(pruneLength: 250)
+        frontmatter {
+          date(formatString: "MMMM Do YYYY")
+          title
+          categories
+          featured_image_max_width
+          featured_image {
+            publicURL
+          }
+          featured_image {
+            childImageSharp {
+              resize(width: 1500, height: 1500) {
+                src
+              }
+              gatsbyImageData(width: 768, placeholder: TRACED_SVG, layout: CONSTRAINED)
+            }
+          }
         }
       }
     }
   }
-`
+  site {
+    siteMetadata {
+      siteUrl
+      title
+      description
+    }
+  }
+  file(relativePath: {eq: "brandonlehr_header.png"}) {
+    childImageSharp {
+      gatsbyImageData(width: 1080, placeholder: TRACED_SVG, layout: FIXED)
+    }
+  }
+}`

@@ -39,35 +39,33 @@ const Tags = ({ pageContext, data, location }) => {
 
   const titleCased = titleCaseCategories(tag)
 
-  return (
-    <>
-      <Metatags
-        title={`${titleCased} on Brandon Lehr . com`}
-        description={description}
-        thumbnail={siteUrl + data.file.childImageSharp.fixed.src}
-        url={siteUrl}
-        pathname={`/categories/${tag}`}
-      />
-      <Layout pageType="postList" title={titleCased} location={location} showNav>
-        <TagHeaderDiv>
-          <NumberBadge>{totalCount}</NumberBadge>
-          <h2>{titleCased}</h2>
-        </TagHeaderDiv>
-        <ul>
-          {edges.map(({ node }) => {
-            const { title } = node.frontmatter
-            const { slug } = node.fields
-            return (
-              <li key={slug}>
-                <Link to={slug}>{title}</Link>
-              </li>
-            )
-          })}
-        </ul>
-        <Link to="/categories">All Categories</Link>
-      </Layout>
-    </>
-  )
+  return <>
+    <Metatags
+      title={`${titleCased} on Brandon Lehr . com`}
+      description={description}
+      thumbnail={siteUrl + data.file.childImageSharp.gatsbyImageData.src}
+      url={siteUrl}
+      pathname={`/categories/${tag}`}
+    />
+    <Layout pageType="postList" title={titleCased} location={location} showNav>
+      <TagHeaderDiv>
+        <NumberBadge>{totalCount}</NumberBadge>
+        <h2>{titleCased}</h2>
+      </TagHeaderDiv>
+      <ul>
+        {edges.map(({ node }) => {
+          const { title } = node.frontmatter
+          const { slug } = node.fields
+          return (
+            <li key={slug}>
+              <Link to={slug}>{title}</Link>
+            </li>
+          )
+        })}
+      </ul>
+      <Link to="/categories">All Categories</Link>
+    </Layout>
+  </>;
 }
 
 Tags.propTypes = {
@@ -96,39 +94,35 @@ Tags.propTypes = {
 
 export default Tags
 
-export const pageQuery = graphql`
-  query($tag: [String]) {
-    site {
-      siteMetadata {
-        title
-        description
-        siteUrl
-      }
+export const pageQuery = graphql`query ($tag: [String]) {
+  site {
+    siteMetadata {
+      title
+      description
+      siteUrl
     }
-    file(relativePath: { eq: "brandonlehr_header.png" }) {
-      childImageSharp {
-        fixed(width: 1040) {
-          ...GatsbyImageSharpFixed_withWebp_tracedSVG
+  }
+  file(relativePath: {eq: "brandonlehr_header.png"}) {
+    childImageSharp {
+      gatsbyImageData(width: 1040, placeholder: TRACED_SVG, layout: FIXED)
+    }
+  }
+  allMarkdownRemark(
+    limit: 2000
+    sort: {fields: [frontmatter___date], order: DESC}
+    filter: {frontmatter: {categories: {in: $tag}}}
+  ) {
+    totalCount
+    edges {
+      node {
+        frontmatter {
+          title
+          date
         }
-      }
-    }
-    allMarkdownRemark(
-      limit: 2000
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { categories: { in: $tag } } }
-    ) {
-      totalCount
-      edges {
-        node {
-          frontmatter {
-            title
-            date
-          }
-          fields {
-            slug
-          }
+        fields {
+          slug
         }
       }
     }
   }
-`
+}`
