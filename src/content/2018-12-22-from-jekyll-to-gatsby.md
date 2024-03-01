@@ -11,7 +11,7 @@ featured_image: '../images/gatsby.svg'
 featured_image_max_width: 300px
 ---
 
-Back in [September of 2016](/jekyll/i-built-this/2016/09/06/welcome-to-my-new-jekyll-blog) I moved this blog from WordPress to [Jekyll](https://jekyllrb.com/). I was interested in speed that a static site generator provides. At the time, I looked into the available solutions out there and decided to go with Jekyll, as it was very popular and had great support for github pages. Overall, I was pleased with with Jekyll, even though it is implemented in Ruby, a language and ecosystem with which I had no previous experience with.
+Back in [September of 2016](/welcome-to-my-new-jekyll-blog) I moved this blog from WordPress to [Jekyll](https://jekyllrb.com/). I was interested in speed that a static site generator provides. At the time, I looked into the available solutions out there and decided to go with Jekyll, as it was very popular and had great support for github pages. Overall, I was pleased with with Jekyll, even though it is implemented in Ruby, a language and ecosystem with which I had no previous experience with.
 
 ## Gatsby
 
@@ -66,7 +66,7 @@ exports.createPages = ({ actions, graphql }) => {
             }
           }
         }
-      `).then(result => {
+      `).then((result) => {
         if (result.errors) {
           console.log(result.errors)
           return reject(result.errors)
@@ -77,7 +77,7 @@ exports.createPages = ({ actions, graphql }) => {
         const postsPerPage = 10
         const numPages = Math.ceil(posts.length / postsPerPage)
 
-        _.times(numPages, i => {
+        _.times(numPages, (i) => {
           createPage({
             path: i === 0 ? `/` : `/${i + 1}`,
             component: path.resolve('./src/templates/index.js'),
@@ -104,7 +104,7 @@ exports.createPages = ({ actions, graphql }) => {
         // Tag pages:
         let categories = []
         // Iterate through each post, putting all found categories into `categories`
-        _.each(posts, edge => {
+        _.each(posts, (edge) => {
           if (_.get(edge, 'node.frontmatter.categories')) {
             categories = categories.concat(edge.node.frontmatter.categories)
           }
@@ -113,7 +113,7 @@ exports.createPages = ({ actions, graphql }) => {
         categories = _.uniq(categories)
 
         // Make tag pages
-        categories.forEach(tag => {
+        categories.forEach((tag) => {
           createPage({
             path: `/categories/${_.kebabCase(tag)}/`,
             component: categoryTemplate,

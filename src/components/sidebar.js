@@ -62,32 +62,32 @@ export default function Sidebar(props) {
             <a href="https://play.google.com/store/apps/developer?id=Brandon+Lehr" >View all of my Android Apps</a>
           </li>
           <li>
-            <Link to="/alpaca/i-built-this/2018/09/02/alpaca-tracker">
+            <Link to="/alpaca-tracker">
               The Alpaca Tracker
             </Link>
             , free alpaca record keeping software for mobile and web!
           </li>
           <li>
-            <Link to="/Android/iOS/Location%20Reminders/2019/05/03/remind-me-when-im-there">
+            <Link to="/remind-me-when-im-there">
               Remind Me When I'm There
             </Link>
             , Android and iOS location aware reminders!
           </li>
           <li>
-            <Link to="/android/i-built-this/2018/10/29/roll-call-attendance-app-for-android">
+            <Link to="/roll-call-attendance-app-for-android">
               Roll Call
             </Link>
             , Attendance Tracking, Made Easy!
           </li>
           <li>
-            <Link to="/i-built-this/2016/06/01/pinewoodraceday">
+            <Link to="/pinewoodraceday">
               PinewoodRaceDay.com
             </Link>
             , free software for running and scoring pinewood derby and
             raingutter regatta races. Built with react and redux.
           </li>
           <li>
-            <Link to="/i-built-this/wordpress/2015/12/02/introducing-pummel-wordpress-theme">
+            <Link to="/introducing-pummel-wordpress-theme">
               Pummel WordPress Theme
             </Link>
             , a highly customizable theme perfect for personal blogs and

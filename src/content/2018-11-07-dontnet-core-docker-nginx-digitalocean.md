@@ -12,7 +12,7 @@ featured_image_max_width: 300px
 
 ![docker logo](../images/docker_digital_encrypt.png)
 
-I initially deployed my .NET Core app, the [Alpaca Tracker](/alpaca/i-built-this/2018/09/02/alpaca-tracker), to Azure App Service. Overall I was pleased with the service, but not with the price! I figured I could save roughly $50 a month moving to a $10 Digital Ocean droplet. I'm writting this to share what I learned and to document the proccess for the next time I need it.
+I initially deployed my .NET Core app, the [Alpaca Tracker](/alpaca-tracker), to Azure App Service. Overall I was pleased with the service, but not with the price! I figured I could save roughly $50 a month moving to a $10 Digital Ocean droplet. I'm writting this to share what I learned and to document the proccess for the next time I need it.
 
 ## Setting Up Docker
 

@@ -6,12 +6,13 @@ author: Brandon
 layout: post
 guid: http://brandonlehr.com/?p=111
 permalink: /wchscouts-com-cub-boy-scout-website-for-washington-ch-oh/
-categories: ['i-built-this']
+categories: ['apps']
 featured_image: '../images/wchscouts_scrn_sht-1024x574.png'
 image: '../images/wchscouts_scrn_sht-1024x574.png'
 comments: true
 description: The building of wchscouts.com
 ---
+
 ## Does something truly exist if it doesn&#8217;t have a website?
 
 This day and age you have to wonder, &#8220;Does something truly exist if it doesn&#8217;t have a website?&#8221; I&#8217;ve been involved with scouting for the past 6 years. A scouting program without a website! Everything that I have read on learning web design and programming has stressed the fact that one should attempt to apply new skills to a real-world project as soon as possible. A pack website was my chance to flex some new muscles.

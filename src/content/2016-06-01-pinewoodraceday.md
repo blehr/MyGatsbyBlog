@@ -6,7 +6,7 @@ author: Brandon
 layout: post
 guid: http://brandonlehr.com/?p=510
 permalink: /pinewoodraceday/
-categories: ['i-built-this']
+categories: ['apps']
 featured_image: '../images/pinewood.jpg'
 image: '../images/pinewood.jpg'
 comments: true
@@ -34,7 +34,6 @@ Not everyone has the latest and greatest computer and then there is Windows, Mac
 Our pack is blessed to have a nice pinewood derby track with precision timers, but the software was problematic and eventually disappeared altogether. PinewoodRaceDay solves our problem by providing an easy to use interface for entering times and calculating averages and sorting by fastest times.
 
 I wanted this solution to work as widely as possible, supporting tracks without timers as well as raingutter regatta races. To achieve this, there is a setting on the preferences page that allows converting to a points method. Everything works the same, just with entering scores from 1 to 4 for each heat, which will be totaled with the lowest score being the fastest.
-
 
 ## Ready to Race
 

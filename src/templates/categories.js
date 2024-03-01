@@ -37,6 +37,7 @@ const Tags = ({ pageContext, data, location }) => {
   const { edges, totalCount } = data.allMarkdownRemark
   const { description, siteUrl } = data.site.siteMetadata
 
+
   const titleCased = titleCaseCategories(tag)
 
   return <>
@@ -94,7 +95,7 @@ Tags.propTypes = {
 
 export default Tags
 
-export const pageQuery = graphql`query{
+export const pageQuery = graphql`query($tag: String) {
   site {
     siteMetadata {
       title
@@ -102,10 +103,21 @@ export const pageQuery = graphql`query{
       siteUrl
     }
   }
-  allMarkdownRemark(limit: 2000) {
-    group(field: {frontmatter: {categories: SELECT}}) {
-      fieldValue
-      totalCount
+  allMarkdownRemark(
+    limit: 2000
+    sort: { frontmatter: { date: DESC }}
+    filter: { frontmatter: { categories: { in: [$tag] } } }
+  ) {
+    totalCount
+    edges {
+      node {
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+        }
+      }
     }
   }
   file(relativePath: {eq: "brandonlehr_header.png"}) {

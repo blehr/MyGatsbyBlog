@@ -2,7 +2,7 @@
 layout: post
 title: Auto Maintenance Tracking App
 date: '2020-03-22'
-categories: ['flutter', 'Android', 'iOS']
+categories: ['flutter', 'android', 'iOS']
 
 comments: true
 description: Easily Track Auto Maintenance and Repairs from your Phone.

@@ -2,19 +2,17 @@
 layout: post
 title: Roll Call Attendance App for Android and iOS
 date: '2018-10-29'
-categories: ['android', 'i-built-this']
+categories: ['android', 'apps']
 comments: true
 description: Attendance Tracking Made Easy on Android and iOS.
-image: "../images/roll_call_white_rounded_512.png"
-featured_image: "../images/roll_call_white_rounded_512.png"
+image: '../images/roll_call_white_rounded_512.png'
+featured_image: '../images/roll_call_white_rounded_512.png'
 featured_image_max_width: 300px
 ---
-
 
 ![Roll Call Logo](../images/roll_call_white_rounded_512.png)
 
 ## Looking for a convenient way to track attendance?
-
 
 <div class="two-item-flex-no-border">
   <div style="width:200px; margin:auto;">
@@ -87,7 +85,6 @@ featured_image_max_width: 300px
     </a>
   </div>
 </div>
-
 
 ## On the Web
 

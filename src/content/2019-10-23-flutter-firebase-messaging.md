@@ -2,7 +2,7 @@
 layout: post
 title: Flutter Firebase Messaging - Displaying messages while the user is in the app
 date: '2019-10-23'
-categories: ['flutter', 'Firebase', 'Push-Notifications', 'Android', 'iOS']
+categories: ['flutter', 'firebase', 'push-notifications', 'android', 'iOS']
 
 comments: true
 description: How to listen to in-coming Firebase push messages and display them to the user.

@@ -7,16 +7,13 @@ layout: post
 guid: http://brandonlehr.com/?p=1
 permalink: /hello-world/
 categories:
-  - i-built-this
+  - wordpress
 comments: true
 description: Announcing my move to WordPress
 image: site.logo
 ---
 
 **Update 9/5/2016** This blog is now created with <a href="https://jekyllrb.com/" >Jekyll</a> and hosted on <a href="https://pages.github.com/">GitHub-Pages</a>
-
-
-
 
 Well, I&#8217;ve finally done it. I started a WordPress Blog.
 
@@ -25,7 +22,6 @@ That&#8217;s not to say that I&#8217;m new to the blogging world. I started my f
 ## Living Hope
 
 ![my-livinghope.blogspot.com](../images/screenshot-my-livinghope-e1431070572385.png)
-
 
 Most of my posts were of Christian book reviews and the occasional opinion piece. I spent a lot of time learning how blogging, and the whole internet, in general, worked. This was the initial spark that set me on fire for technology.
 

@@ -2,7 +2,7 @@
 layout: post
 title: Run Record - iOS App
 date: '2021-08-11'
-categories: ['swift-ui', 'iOS', 'Running']
+categories: ['swift-ui', 'iOS', 'running']
 
 comments: true
 description: Quickly view workouts by year, month, or week, gaining valuable insights into your progress.

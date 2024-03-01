@@ -2,7 +2,7 @@
 layout: post
 title: Using the Accelerometer in Flutter
 date: '2019-07-05'
-categories: ['Android', 'iOS', 'flutter']
+categories: ['android', 'iOS', 'flutter']
 
 comments: true
 description: How to use the accelerometer in a Flutter app.
@@ -15,7 +15,7 @@ featured_image_max_width: 300px
   <iframe width="560" height="315" src="https://www.youtube.com/embed/ZDOyCNTM9ro/?mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-I recently wanted to create a simple game for my [Drink Counter](/Android/iOS/flutter/2019/06/27/drink-counter-stats-and-quotes) app that made use of the device's accelerometer. Here is what I learned.
+I recently wanted to create a simple game for my [Drink Counter](/drink-counter-stats-and-quotes) app that made use of the device's accelerometer. Here is what I learned.
 
 ## Setup
 

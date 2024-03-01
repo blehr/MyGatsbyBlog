@@ -6,7 +6,7 @@ author: Brandon
 layout: post
 guid: http://brandonlehr.com/?p=74
 permalink: /whendidiwork-a-time-clock-app/
-categories: ['i-built-this']
+categories: ['apps']
 featured_image: '../images/whendidiwork-logo.png'
 featured_image_max_width: 300px
 image: '../images/whendidiwork-logo.png'
@@ -18,7 +18,7 @@ description: The whendidiwork time tracking application - perfect for Third Shif
   <strong>Update 10/22/2019 </strong> This app is no longer available. I got to save some money on hosting when I can!
 </div>
 <div class="well">
-  <strong>Update 12/5/2015 </strong>I have released an updated version of the app with new features! When you&#8217;re finished here, head over and <a href="/i-built-this/javascript/angular/2015/12/06/new-and-improved-whendidiwork-com">learn more</a> about the new whendidiwork!
+  <strong>Update 12/5/2015 </strong>I have released an updated version of the app with new features! When you&#8217;re finished here, head over and <a href="/new-and-improved-whendidiwork-com">learn more</a> about the new whendidiwork!
 </div>
 
 <div style="width: 200px"><a href="https://play.google.com/store/apps/details?id=com.brandonlehr.whendidiwork&amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"></a></div>

@@ -2,7 +2,7 @@
 layout: post
 title: Handling Google AdSense with SSR React - Hydration Errors
 date: '2024-02-25'
-categories: ['react', 'adsense', 'SSR', 'remixjs']
+categories: ['react', 'adsense', 'sSR', 'remixjs']
 comments: true
 description: Fixing Hydration Errors while incorporating AdSense in React SSR
 image: '../images/react_no_match.png'
@@ -10,7 +10,7 @@ featured_image: '../images/react_no_match.png'
 featured_image_max_width: 300px
 ---
 
-I recently re-wrote my app [Alpaca Tracker](/alpaca/i-built-this/2018/09/02/alpaca-tracker) with the [Remix](https://remix.run/) framework. I'll write more on that later, but for now I want to talk about the troubles I faced while trying to incorporate Google AdSense Ads. ( I know ads suck, but hosting costs money!!! ).
+I recently re-wrote my app [Alpaca Tracker](/alpaca-tracker) with the [Remix](https://remix.run/) framework. I'll write more on that later, but for now I want to talk about the troubles I faced while trying to incorporate Google AdSense Ads. ( I know ads suck, but hosting costs money!!! ).
 
 ![Hydration Error](../images/react_no_match.png)
 

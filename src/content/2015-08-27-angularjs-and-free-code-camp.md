@@ -15,7 +15,7 @@ description: The difficulties of learning Angular JS in Free Code Camp
 
 ![angular kid](../images/success-angular.jpg)
 
-I was feeling pretty good. The [ziplines](/javascript/learn-to-code/free-code-camp/2015/07/29/free-code-camp-progress-update) were finished and my confidence with HTML, CSS, JavaScript, jQuery, and bootstrap was high. Bring it on! I&#8217;m ready for anything!
+I was feeling pretty good. The [ziplines](/free-code-camp-progress-update) were finished and my confidence with HTML, CSS, JavaScript, jQuery, and bootstrap was high. Bring it on! I&#8217;m ready for anything!
 
 ## AngularJS
 
@@ -27,7 +27,7 @@ The problem is that this course is the only Angular training on the Free Code Ca
 
 My first thought was to try and recreate all of the ziplines using Angular. This quickly informed me that I needed some more training.
 
- At first, it felt like I was taking a step backwards. I was hitting a wall trying to reproduce functionality with Angular that I had previously done without it. So I put my Google skills to use and went looking for the help I needed.
+At first, it felt like I was taking a step backwards. I was hitting a wall trying to reproduce functionality with Angular that I had previously done without it. So I put my Google skills to use and went looking for the help I needed.
 
 ## AngularJS Tutorials and Help
 

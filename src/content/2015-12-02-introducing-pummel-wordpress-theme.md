@@ -6,7 +6,7 @@ author: Brandon
 layout: post
 guid: http://brandonlehr.com/?p=220
 permalink: /introducing-pummel-wordpress-theme/
-categories: ['i-built-this', 'wordpress']
+categories: ['wordpress']
 featured_image: '../images/Screenshot-2015-11-30-at-3.10.36-AM.png'
 image: '../images/Screenshot-2015-11-30-at-3.10.36-AM.png'
 comments: true
@@ -19,7 +19,6 @@ My first WordPress theme, [Pummel](https://wordpress.org/themes/pummel/), has be
 
 I designed Pummel to be the theme that I wanted. I like a traditional blog with a customizable front page. So often, when searching for a theme I find that they are &#8220;just too much&#8221;. I wasn&#8217;t interested in a magazine layout or a photography site. I wanted&#8230; simple. A theme that could work well as a personal bio, portfolio, or blog.<!--more-->
 
-
 ## Bringing Pummel to Life
 
 When I first decided upon creating my own theme, I knew that I needed to invest in some training. [Treehouse](https://teamtreehouse.com/) offers excellent courses in their [WordPress Development track](https://teamtreehouse.com/tracks/wordpress-development) that set me in the right direction.
@@ -31,7 +30,6 @@ The next biggest help I found was the [underscores starter theme](http://undersc
 &#8220;There are like a bazillion WordPress themes out there, why should I choose Pummel?&#8221;
 
 I like Pummel because it is simple and allows the content to show through. The front page, as well as the rest of the site, can be customized into a multitude of configurations. Change every color, add background images, static or fixed, use the front page middle widgets to highlight important posts or portfolio projects. With Pummel, you can present your content in a beautiful and accessible format.
-
 
 ![pummel screenshot](../images/pummel_full-_tiny.png)
 

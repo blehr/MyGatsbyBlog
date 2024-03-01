@@ -72,7 +72,7 @@ export const pageQuery = graphql`{
       siteUrl
     }
   }
-  allMarkdownRemark(limit: 2000) {
+  allMarkdownRemark(limit: 2000, sort: { frontmatter: { categories: DESC }}) {
     group(field: {frontmatter: {categories: SELECT}}) {
       fieldValue
       totalCount

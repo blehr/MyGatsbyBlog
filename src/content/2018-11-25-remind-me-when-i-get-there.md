@@ -2,12 +2,12 @@
 layout: post
 title: Location Aware Reminders On Android with Remind Me When I'm There
 date: '2018-11-25'
-categories: ['android', 'i-built-this']
+categories: ['android', 'apps']
 
 comments: true
-description:  Location Aware Reminders On Android with Remind Me When I'm There and send a text message on arrival.
-image: "../images/remindme_latest.png"
-featured_image: "../images/remindme_latest.png"
+description: Location Aware Reminders On Android with Remind Me When I'm There and send a text message on arrival.
+image: '../images/remindme_latest.png'
+featured_image: '../images/remindme_latest.png'
 featured_image_max_width: 300px
 ---
 
@@ -32,12 +32,11 @@ The problem is that reminders aren't needed when, they are needed **where**! Wit
 
 <i class="far fa-bell" aria-hidden="true"></i> Remember to get Milk
 
-
 <div style="width: 200px"><a href="https://play.google.com/store/apps/details?id=com.brandonlehr.remindmewhenimthere&amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"></a></div>
 
 ## Getting Started
 
-Clicking the floating action button on the home screen launches the Google Place Picker. From here you can pick your current location, one of the  nearby suggestions, or search for a location.
+Clicking the floating action button on the home screen launches the Google Place Picker. From here you can pick your current location, one of the nearby suggestions, or search for a location.
 
 ![Place Picker](../images/placePicker.jpg)
 
@@ -86,9 +85,6 @@ The app polls the device location at an interval you specify.
 
 The app does poll the devices location, which does use some battery, but testing has shown that usage has had minimal affect on battery life.
 
-
 <div style="width: 200px"><a href="https://play.google.com/store/apps/details?id=com.brandonlehr.remindmewhenimthere&amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"></a></div>
 
-
 I want this app to be as helpful as possible! Please let me know if there are any problems, or features you would like to see added!
-

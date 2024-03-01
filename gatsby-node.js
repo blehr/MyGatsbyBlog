@@ -71,7 +71,6 @@ exports.createPages = ({ actions, graphql }) => {
         })
         // Eliminate duplicate categories
         categories = _.uniq(categories)
-
         // Make tag pages
         categories.forEach(tag => {
           createPage({
@@ -101,11 +100,12 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     )
 
     // create a new slug concatenating everything
-    const categorySlug = categories.join('/')
-    const dateSlug = date.replace(/-/g, '/')
+    // const categorySlug = categories.join('/')
+    // const dateSlug = date.replace(/-/g, '/')
 
-    const slug = `/${categorySlug}/${dateSlug}/${title}`
-
+    // const slugPast = `/${categorySlug}/${dateSlug}/${title}`
+    const slug = `/${title}`
+    // console.log(`/${dateSlug}/${title}`, `/${date}/${title}`)
     createNodeField({ node, name: `slug`, value: slug })
 
     // save the date for later use

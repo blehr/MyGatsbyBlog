@@ -2,7 +2,7 @@
 layout: post
 title: Remind Me When I'm There
 date: '2019-05-03'
-categories: ['Android', 'iOS', 'Location Reminders']
+categories: ['android', 'iOS', 'location-reminders']
 comments: true
 description: Shared location-triggered reminders. Reminders Where You Need Them!
 image: '../images/remindme_pro_app_icon.png'
@@ -20,13 +20,13 @@ I know you have tried all of the reminder apps, that you never remember to check
 
 Often reminders aren't needed when <i class="fas fa-clock"></i>, they are needed where <i class="fas fa-map-marker-alt"></i>.
 
-<i class="fas fa-map-marked-alt"></i>  When I get to the office, I have to...
+<i class="fas fa-map-marked-alt"></i> When I get to the office, I have to...
 
-<i class="fas fa-map-marked-alt"></i>  Next time I'm at the grocery store I need to get...
+<i class="fas fa-map-marked-alt"></i> Next time I'm at the grocery store I need to get...
 
-<i class="fas fa-map-marked-alt"></i>  Why can't my husband remember to shut the garage door when he leaves...
+<i class="fas fa-map-marked-alt"></i> Why can't my husband remember to shut the garage door when he leaves...
 
-<i class="fas fa-map-marked-alt"></i>  When Carl gets to the client's office I need him to remember to sign in...
+<i class="fas fa-map-marked-alt"></i> When Carl gets to the client's office I need him to remember to sign in...
 
 What do all these have in common? They need reminded at a **location**, not a time!
 

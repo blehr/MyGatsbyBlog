@@ -12,7 +12,8 @@ image: '../images/Screenshot-2015-07-29-at-6.14.25-PM.png'
 comments: true
 description: An update on my Free Code Camp progress
 ---
-It&#8217;s been just over a month since [I last wrote](/javascript/learn-to-code/free-code-camp/2015/06/19/free-code-camp-full-stack-javascript-training) of my adventures in Free Code Camp. Since then I have been trudging along, making use of every free moment I can get, to learn and build. All the hard work is paying off, and as of now, I have completed six of the eight ziplines!
+
+It&#8217;s been just over a month since [I last wrote](/free-code-camp-full-stack-javascript-training) of my adventures in Free Code Camp. Since then I have been trudging along, making use of every free moment I can get, to learn and build. All the hard work is paying off, and as of now, I have completed six of the eight ziplines!
 
 ![FreeCodeCamp map ziplines](../images/screenshot-freecodecamp-map-zipline.png)
 
@@ -23,7 +24,6 @@ On the course [map](http://www.freecodecamp.com/map) they are listed as Front En
 ### First up, is the Quote Machine Zipline.
 
 The most interesting thing about this project was trying to get the tweet button to open up with the quote text already populated. This is quite easy to do if the content is static, but took some figuring out with each quote being dynamically loaded. [<i class="fas fa-chevron-right"></i> Quote Machine](http://codepen.io/blehr/full/BNxepx)
-
 
 ![Free Code Camp Quote Generator Zipline](../images/screenshot-quote-zipline.png)
 
@@ -56,7 +56,6 @@ This was a fun project, building a site through which to search Wikipedia. It wa
 Seriously, the first thing I did was look up what this pomodoro thing was! You can read about it yourself here [Pomodoro Technique](https://en.wikipedia.org/wiki/Pomodoro_Technique). So, for this I needed an adjustable countdown timer for the work sessions and an adjustable timer for the breaks. All in all, it works pretty well, but personally I&#8217;m not sure I want to be racing the clock all that much! [<i class="fas fa-chevron-right"></i> Pomodoro Clock](http://codepen.io/blehr/full/VLVbZE)
 
 ![Free Code Camp Pomodoro Clock](../images/screenshot-pomodoro-clock-zipline.png)
-
 
 ### My CodePen Collection
 

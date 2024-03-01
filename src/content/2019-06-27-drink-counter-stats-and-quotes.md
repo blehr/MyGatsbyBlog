@@ -2,7 +2,7 @@
 layout: post
 title: Drink Counter, Stats, and Quotes
 date: '2019-06-27'
-categories: ['Android', 'iOS', 'flutter']
+categories: ['android', 'iOS', 'flutter']
 
 comments: true
 description: Drink Counter, an Android and iOS app for tracking and monitoring your drinks, estimating your BAC, all while enjoying great drinking quotes.

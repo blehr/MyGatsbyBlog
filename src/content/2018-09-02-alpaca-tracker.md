@@ -2,11 +2,11 @@
 layout: post
 title: Announcing The Alpaca Tracker
 date: '2018-09-02'
-categories: ['alpaca', 'i-built-this']
+categories: ['alpacas', 'apps']
 comments: true
 description: Convenient and FREE alpaca record keeping software on the web, Android, and iOS.
-image: "../images/alpaca_tracker_social_image.png"
-featured_image: "../images/alpaca_tracker_social_image.png"
+image: '../images/alpaca_tracker_social_image.png'
+featured_image: '../images/alpaca_tracker_social_image.png'
 featured_image_max_width: 300px
 ---
 
@@ -27,7 +27,6 @@ featured_image_max_width: 300px
     </a>
   </div>
 </div>
-
 
 ### Who doesn't love alpacas?
 
